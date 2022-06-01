@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>登入 - 管理系统</title>
+        <link rel="stylesheet" href="__ADMIN__/lib/layui/css/layui.css"  media="all">
+        <link rel="stylesheet" href="__ADMIN__/lib/layui/css/xx_login.css"  media="all">
+        <style type="text/css">
+            body{
+                background:url("__ADMIN__/lib/vaeyo/img/bg.jpg") center center;
+				height: 100vh;
+				background-size: cover;
+				position: relative;
+				background-color: #f2f2f2;
+
+            }
+            .vaeyo-login-body{
+                min-width:300px;
+                max-width:400px;
+                min-height:150px;
+                margin:0 auto;
+                margin-top:150px
+            }
+            .vaeyo-login-body h2{
+                margin: 20px auto;
+                text-align: center;
+                font-size: 32px;
+            }
+        </style>
+    </head>
+    <body>
+		<div class="main">
+			<h1 id="h1"><span style="font-size: 84px;">WELLCOME</span><span style="font-size:30px;"></span></h1>
+			<p id="time"></p>
+			<div onclick="javascript:login()" class="enter">
+				Please&nbsp;&nbsp;Click&nbsp;&nbsp;Enter
+			</div>
+		</div>
+		<div class="loginarea" style="display: none;">
+			<form id="LAY-user-login" class="layui-form" action="">
+				<div class="layui-form-item">
+					<!--<label class="layui-form-label">账号</label>-->
+					<div class="layui-input-inline pm-login-input">
+						<input type="text" name="username" lay-verify="required"  value="admin" placeholder="请输入账号" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<!--<label class="layui-form-label">密码</label>-->
+					<div class="layui-input-inline pm-login-input">
+						<input type="password" name="password" lay-verify="required" value="123456" placeholder="请输入密码" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<!--<label class="layui-form-label">人机验证</label>-->
+					<div class="layui-input-block xx-code-area">
+						<input type="text" lay-verify="required|code" autocomplete="off"  name="captcha" class="layui-input" placeholder="请输入验证码" />
+						<img onclick="this.src='/captcha?seed='+Math.random()" src="/captcha" width="190px" height="40px" style="padding-top: 15px" class="login-captcha" alt="点击刷新验证码"/>
+						<!--						<canvas id="canvas" class="code" width="98" height="36"></canvas>-->
+						<input type="hidden"  autocomplete="off"  name="key" class="layui-input" />
+					</div>
+				</div>
+				<div class="layui-form-item" style="margin-top:25px;margin-bottom:0;">
+					<div class="layui-input-block">
+						<button class="layui-btn" lay-submit lay-filter="LAY-login-submit" style="width:190px;">立即登录</button>
+<!--						<button class="layui-btn" lay-submit lay-filter="vaeyo-login-submit" id="vaeyo-login-submit">登入系统</button>-->
+					</div>
+				</div>
+			</form>
+		</div>
+		<script src="__ADMIN__/lib/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use(['form'], function () {
+		        var form = layui.form,$ = layui.$;
+		        form.on('submit(btn-submit)', function(data) {
+		        	console.log(11111)
+                    $.ajax({
+                        url:"/admin/publicer/loginSubmit",
+                        data: data.field,
+                        type:'post',
+						dataType:'json',
+                        async: false,
+                        success:function(res) {
+                            layer.tips(res.msg,'#vaeyo-login-submit');
+                            if(res.code === 1) {
+                                setTimeout(function() {
+                                    location.href = "{:url('admin/index/index')}";
+                                }, 1500);
+                            }else {
+								layer.msg(res.msg, {
+									offset: '15px',
+									icon: 2,
+									time: 1000
+								}, function() {
+									$('#captcha').click();
+								});
+							}
+                        }
+                    })
+                    return false;
+                });
+		    });
+
+			function login() {
+				var $ = layui.jquery;
+				$(".enter").hide();
+				var str = $(".loginarea").html();
+				layer.open({
+					id: 'layer-login',
+					type: 1,
+					title: false,
+					shade: 0.4,
+					shadeClose: true,
+					area: ['480px', '320px'],
+					closeBtn: 0,
+					anim: 1,
+					skin: 'xx-layer-login',
+					content: str,
+					success: function(layero, index) {
+						$(".xx-layer-login .layui-form").attr("id", "lay-submit");
+						$(".xx-layer-login .layui-form").attr("lay-filter", "lay-submit");
+						$(".xx-layer-login .layui-btn").attr("id", "btn-submit");
+						$(".xx-layer-login .layui-btn").attr("lay-filter", "btn-submit");
+						layui.form.render(null, 'lay-submit');
+					},
+					end: function(){
+						$(".enter").show();
+					}
+				});
+			}
+		</script>
+    </body>
+</html>

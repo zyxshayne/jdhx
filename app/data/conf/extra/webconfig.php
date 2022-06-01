@@ -1,0 +1,1 @@
+<?php return ['admin_title'=>'QY后台管理系统','title'=>'111','keywords'=>'1111','email'=> '15773001203@163.com','email_code' => 'PZSIICPPMYSLNUGA','logo'=>'http://rcfgsdrlf.hn-bkt.clouddn.com/20220530133951logo.png','desc'=>'11111111111111111','icp'=>'ICP备19050941号','code'=>'11111','domain'=>'dsagfjkd','port_cache_time'=>''];
