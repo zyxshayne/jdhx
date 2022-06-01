@@ -99,7 +99,7 @@
 
 
             <!-- VIEW MORE -->
-            <div class="text-center padding-bottom-100">
+            <div class="text-center padding-bottom-40">
 <!--                <a href="#." class="btn">VIEW MORE</a>-->
             </div>
 
@@ -135,19 +135,15 @@
     function ShowCate(cateList,article) {
 
         var id = getUrlParams('id')
-        console.log(id)
-        if(id==null){
-            $("#cate").append('<li><a class="active" href="#." data-filter="*">ALL</a></li>')
-        }else{
-            $("#cate").append('<li><a  href="#." data-filter="*">ALL</a></li>')
-        }
+
+        // if(id==null){
+        //     $("#cate").append('<li><a id=""class="active" href="#." data-filter="*">ALL</a></li>')
+        // }else{
+        //     $("#cate").append('<li><a  href="#." data-filter="*">ALL</a></li>')
+        // }
+        $("#cate").append('<li><a id="a" class="active" href="#." data-filter="*">ALL</a></li>')
         for(i=0;i<cateList.length;i++){
-            if(cateList[i].id==id){
-                $("#cate").append('<li><a class="active" href="#" data-filter=".'+cateList[i].id+'">'+cateList[i].title+'</a></li>')
-            }else{
-                $("#cate").append('<li><a  href="#" data-filter=".'+cateList[i].id+'">'+cateList[i].title+'</a></li>')
-            }
-            // $("#cate").append('<li><a id="a'+cateList[i].id+'" href="#" data-filter=".'+cateList[i].id+'">'+cateList[i].title+'</a></li>')
+            $("#cate").append('<li><a id="a'+cateList[i].id+'" href="#" data-filter=".'+cateList[i].id+'">'+cateList[i].title+'</a></li>')
         }
         for (i=0;i<article.length;i++){
 
@@ -161,6 +157,22 @@
             $('#article-list').append(str)
 
         }
+        var $container = $('.port-wrap .items');
+        $container.imagesLoaded(function () {
+            $container.isotope({
+                itemSelector: '.portfolio-item',
+                layoutMode: 'masonry'
+            });
+        });
+        if(id!=null){
+            $('.portfolio-filter li a').removeClass('active');
+            $('#a'+id).addClass('active');
+            var selector =  $('#a'+id).attr('data-filter');
+            $container.isotope({
+                filter: selector
+            });
+        }
+
     }
 </script>
 <script src="js/bootstrap.min.js"></script>
@@ -172,5 +184,8 @@
 <script type="text/javascript" src="rs-plugin/rs-plugin/js/jquery.tp.t.min.js"></script>
 <script type="text/javascript" src="rs-plugin/rs-plugin/js/jquery.tp.min.js"></script>
 <script src="js/main.js"></script>
+<script>
+
+</script>
 </body>
 </html>
