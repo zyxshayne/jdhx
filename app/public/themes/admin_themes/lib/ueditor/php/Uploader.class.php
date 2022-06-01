@@ -377,10 +377,10 @@ class Uploader
     public function saveToQiniu($file){
         require '../../../../../../vendor/autoload.php';
         $auth = new Auth('JjYpkInI24IVwVnLdC8S24k7Cf0UHw9y26obAVTR', 'DPXS7Mm8NzQMFhy8BlsI2ShFm4ABH2lCPvA2g_Ku');
-        $token = $auth->uploadToken('shayne-qy');
+        $token = $auth->uploadToken('shayne-jdhx');
         $uploadMgr = new UploadManager();
         list($ret, $err) = $uploadMgr->putFile($token, date('ymdhis',time()).$this->getFileName(), $file);
-        $this->fullName = 'http://rcfgsdrlf.hn-bkt.clouddn.com' .'/'. $ret['key'];
+        $this->fullName = 'http://cdn.fooje.cn' .'/'. $ret['key'];
         if($err!=null){
             $this->stateInfo = $err;
         }else{

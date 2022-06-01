@@ -1233,11 +1233,19 @@ body.margin-50 .space-nav .is-sticky .sticky {
 .col-4.gallery .item {
 	width: 100%;
 }
+	.col-3 .portfolio-item{
+		width: 50%;
+		float: left;
+	}
 }
 @media(max-width:540px) {
 .offer-services li {
 	width: 100%;
 }
+	.col-3 .portfolio-item{
+		width: 48%;
+		float: left;
+	}
 .feature-item li {
 	width: 100%;
 }
@@ -1315,12 +1323,24 @@ header .logo:before {
 .gallery .col-6 li {
 	width: 100%;
 }
+	.col-3 .portfolio-item{
+		width: 100%;
+		float: left;
+	}
 }
 @media(max-width:320px) {
 .members li {
 	width: 100%;
 	float: left;
 }
+	.col-3 .portfolio-item{
+		width: 100%;
+		float: left;
+	}
 }
 @media(max-height: 700px) {
+	.col-3 .portfolio-item{
+		width: 48%;
+		float: left;
+	}
 }

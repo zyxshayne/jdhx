@@ -1,0 +1,296 @@
+@media screen and (min-width:1500px) {
+    .ibox-video { height: 700px; }
+}
+
+@media screen and (max-width:1370px) {
+    .proRemoendT { font-size: 26px; }
+}
+
+@media screen and (max-width:1240px) {
+    .inner { width: 1000px; }
+    .link-contact-box .c { width: 62%; }
+    .teamList .con { top: 325px; }
+    .teamList li:hover .con .title { padding: 40px 0px 30px; }
+    .teamPage { padding: 80px 0px; }
+    .teamT { font-size: 34px; margin-bottom: 50px; }
+    .proInfoDemo .imgBox { width: 74%; }
+    .proInfoDemo .con { width: 26%; }
+    .ibox-video { height: 400px; }
+}
+
+.phone-title{padding:0 2rem;margin-top:.5rem;display:none}
+.phone-title div:first-child{font-size:1rem}
+.phone-title div:last-child{font-size:.8rem}
+@media screen and (max-width: 860px){
+    .phone-title{display:block}
+    .lh-works-text{display:none}
+}
+
+@media screen and (max-width:1024px) {
+    .transYT { transform: translateY(0px); -webkit-transform: translateY(0px); opacity: 1; visibility: visible; transition: transform 0ms,opacity 0s cubic-bezier(0.445, 0.145, 0.355, 1); -webkit-transition: transform 0ms,opacity 0s cubic-bezier(0.445, 0.145, 0.355, 1); transition-timing-function: ease-out; -webkit-transition-timing-function: ease-out; }
+    .transYT2 { transform: translateY(0px); -webkit-transform: translateY(0px); opacity: 1; visibility: visible; transition: transform 0ms,opacity 0s cubic-bezier(0.445, 0.145, 0.355, 1); -webkit-transition: transform 0ms,opacity 0s cubic-bezier(0.445, 0.145, 0.355, 1); transition-timing-function: ease-out; -webkit-transition-timing-function: ease-out; }
+    .transXT { transform: translateX(0px); -webkit-transform: translateX(0px); opacity: 1; visibility: visible; transition: transform 0ms,opacity 0s cubic-bezier(0.445, 0.145, 0.355, 1); -webkit-transition: transform 0ms,opacity 0s cubic-bezier(0.445, 0.145, 0.355, 1); transition-timing-function: ease-out; -webkit-transition-timing-function: ease-out; }
+    .transXT2 { transform: translateX(0px); -webkit-transform: translateX(0px); opacity: 1; visibility: visible; transition: transform 0ms,opacity 0s cubic-bezier(0.445, 0.145, 0.355, 1); -webkit-transition: transform 0ms,opacity 0s cubic-bezier(0.445, 0.145, 0.355, 1); transition-timing-function: ease-out; -webkit-transition-timing-function: ease-out; }
+    .action.transYT { opacity: 1; visibility: visible; transform: translateY(0px); -webkit-transform: translateY(0px); }
+    .action.transYT2 { opacity: 1; visibility: visible; transform: translateY(0px); -webkit-transform: translateY(0px); }
+    .action.transXT { opacity: 1; visibility: visible; transform: translateY(0px); -webkit-transform: translateY(0px); }
+    .action.transXT2 { opacity: 1; visibility: visible; transform: translateY(0px); -webkit-transform: translateY(0px); }
+    .top { position: fixed; left: 0px; top: 0px; width: 100%; padding: 0px; height: 50px; display: block; z-index: 900; background-color: #fff; background-color: rgba(255,255,255,1); border-bottom: 1px solid #cccccc; }
+    .showtop { background-color: #fff; background-color: rgba(255,255,255,0.7); }
+    .hlogo { width: 113px; padding: 19px 0px; margin: 0px auto; }
+    .navOpen .navbar-header-toggle { left: 580px; transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s; }
+    .navbar-header-toggle { width: 50px; left: 0px; top: 0px; height: 50px; overflow: hidden; background-color: transparent; }
+    .navbar-header-logo { width: 32px; height: 32px; right: 10px; top: 10px; }
+    .navbar-btn { right: 17.5px; top: 14px; width: 15px; }
+    .navbar-btn-bars { width: 15px; }
+    .navbar-btn-bars .burger { width: 15px; }
+    .header{height:50px;}
+    .lh-nav{width:80%; justify-content:flex-start; text-align:center; padding:0;}
+    .control-bol.news a{top:inherit;transform: translateY(0);bottom: 5vh; width:auto;}
+    .lh-nav .share-list{right:50%;transform: translateX(50%);padding: 0;display:none}
+    .homeIco{top:15px; left:15px;}
+    .lh-header-r{top:15px; right:15px;}
+    .z_words{ top:15px!important}
+    .headerAvtive1 .z_words,.headerAvtive .z_words{top:19px!important}
+
+    .nav .txt { display: none; }
+    .lh-address-item li.last .phone input{border-right:1px solid #5B5D5D !important}
+    .nav li:hover a .txt {opacity:1; display:block;}
+    .nav li:hover a .nav-link-text{opacity:0;}
+    .inner { width: 90%; }
+    .binbox { left: 10%; width: 80%; height: 50px; }
+    .control-bol, .control-bor { padding: 10px 0px; }
+    .control-bor { margin-left: 5%; }
+    .binbox .sharpBox { padding: 22px 0px; display: none; }
+    .backBot { padding-top: 4px; }
+    .backBot .i4 { top: 16px; }
+    .linkBox { padding: 50px 0px; }
+    .linkBox .link-item1, .linkBox .link-item2 { float: none; width: 100%;}
+    .link-logo { width: 120px; }
+    .link-logo img { width: 100%; }
+    .link-contact-box .t { padding-top: 40px; }
+    .link-contact-box .c { width: 70%; }
+    .iboxItem .t { font-size: 40px; }
+    .iboxItem .by { letter-spacing: 0.2em; }
+    .video-vico { display: none; }
+    .boxC .c { font-size: 40px; }
+    .boxC .moreBox { padding: 6px 40px; }
+    .control-bol .prev span, .control-bol .next span, .control-bol .prev span i, .control-bol .next span i { display: none; }
+    .pageT { font-size: 26px; }
+    .aboutPage { padding: 60px 0px 50px; }
+    .mojo_image { margin-top: 40px; }
+    .h500 { height: 350px; }
+    .fixed-img { background-attachment: inherit; background-position: center center; background-size: 120% auto; }
+    .contactT { font-size: 24px; }
+    .contactDL { padding-right: 360px; }
+    .contactDL .con { right: 0px; width: 304px; }
+    .teamList { margin-left: 0px; }
+    .teamList li { margin-left: 0px; width: 100%; float: none; padding-bottom: 0px; background-color: #fff; }
+    .teamList .imgBox { width: 50%; float: left; display: block; margin-bottom: 0px; }
+    .teamList .con { position: relative; top: auto; left: auto; padding: 0px 5% 20px; width: 40%; float: left; display: block; }
+    .teamList .title { padding: 40px 0px 30px; }
+    .teamList .con .c { line-height: 2; }
+    .teamPage { padding: 60px 0px; }
+    .teamT { font-size: 28px; margin-bottom: 40px; }
+    .pagePadding { padding: 30px 0px; padding-top: 80px;}
+    .works-nav { margin-bottom: 40px; font-size: 20px; }
+    .fixed-img-mt { margin-top: 50px; }
+    .con-bot-box.prosharpBox { padding-top: 60px; }
+    .w1010 { width: 90%; }
+    .infoI { margin-bottom: 40px; }
+    .pro-T { padding: 70px 0px; }
+    .pro-T .t { font-size: 50px; }
+    .pro-nav { margin-bottom: 100px; font-size: 20px; }
+    .pro-nav a { margin: 0px 25px; }
+    .product-list li { width: 48%; }
+    .prosiderT { font-size: 24px; }
+    .product-list li { margin-bottom: 40px; }
+    .proRemoendT { font-size: 24px; }
+    .pbanner2 { height: 350px; margin-top: 60px; }
+    .proInfoDemo .imgBox { float: none; margin-right: 0px; width: 100%; }
+    .lh-info .imgBox{margin-top:40px;}
+    .proInfoDemo .con { float: none; width: 100%; overflow: hidden; margin-top:40px; text-align: center; }
+    .borderList .wenbox a { float: none; }
+    .proinfo-con { padding: 50px 0px; width: 100%; }
+    .remoendProCon .product-list li { width: 31.33%; }
+    .productT { font-size: 40px; margin-bottom: 40px; }
+    .pageC2, .pro_mb { margin-bottom: 70px; }
+    .backTop { width: 50px; height: 50px; }
+    .backTop .ico { background-image: url(../img/black_top.png); }
+    .backTop .ibg { height: 100%; }
+    .ibox-video { height: 300px; }
+    .lh-num{margin:auto;}
+    .lh-info{padding:30px 0 0;}
+    .lh-cont-l,.lh-cont-r{width:100%;}
+    .lh-cont{padding:100px 0;}
+    .lh-note{margin-top:50px;}
+    .lh-pay{margin-top:30px;}
+    .lh-go{margin:50px 0;}
+    .lh-car-item li .num{position:absolute; right:0; top:50%; margin-top:-19px;}
+    .lh-car-item li .pre h2{position:absolute; right:0; top:20px;}
+    .lh-car-item li .text{width:55%;}
+    .lh-total h2{width:100%;}
+    .lh-total{margin-top:70px;}
+    .lh-total a{margin-top:30px;}
+    .nav a:hover .nav-link-text{transform:scaleX(1);}
+    .lh-size label{margin:0 !important; width:50%;text-align:center; display:block;}
+    .lh-size label i,.lh-size label span{float:none; display:inline-block;}
+}
+
+@media screen and (max-width:860px) {
+    .ggTeam .lh-size {text-align:center;}
+    .ggTeam .lh-size label{display:inline-block;float: inherit;}
+    .binbox { width: 100%; left: 0px; }
+    .backBot .i1 { height: 40px; }
+    .control-bol { margin-left: 0px; }
+    .control-bol .next { margin-right: 0px; }
+    .iboxItem .t { font-size: 34px; }
+    .iboxItem .by { letter-spacing: 0.1em; }
+    .banner { position: relative; }
+    .boxC { width: 72%; left: 14%; margin-left: 0px; }
+    .boxC .c { font-size: 34px; }
+    .contactDL { padding-right: 0px; }
+    .contactDL .con { position: relative; right: auto; bottom: auto; width: 100%; padding-top: 40px; }
+    .teamT { font-size: 24px; margin-bottom: 30px; }
+    .teamList .title, .teamList li:hover .con .title { padding: 30px 0px 20px; }
+    .teamList .con .c { line-height: 1.8; font-size: 12px; }
+    .works-list .workitem { width: 48%; }
+    .newList { margin: 0px; }
+    .infoT { font-size: 20px; }
+    .infoI .time { float: none; display: block; }
+    .pro-T { padding: 50px 0px; }
+    .pro-T .t { font-size: 40px; }
+    .pro-nav { margin-bottom: 70px; }
+    .pro-nav a { margin: 0px 10px; font-size: 18px; }
+    .prosiderT { font-size: 20px; }
+    .pbanner2 { height: 300px; }
+    .remoendProCon .product-list li { width: 48%; }
+    .productT { font-size: 34px; margin-bottom: 30px; }
+    .pageC2, .pro_mb { margin-bottom: 50px; }
+    .pbannervideo { margin-top: 50px; }
+    .lh-car-item li .text{padding-left:5%; width:50%;}
+    .lh-car-item li .num{position:relative; margin-top:20px; top:0; width:100%;}
+    .lh-car-item li .num .lh-num{margin:0;}
+    .lh-car-item li .pre h2{top:inherit; bottom:47px;}
+    .lh-car-item li .pre a{bottom:16px;}
+    .lh-address-item li{height:45px; margin-bottom:20px;}
+    .lh-address-item li input{height:45px; line-height:45px;}
+    .lh-select{width:100%; line-height:45px; height:45px; margin-top:20px;}
+    .lh-address-item li:nth-child(2){height:auto; margin-top:-20px;}
+    .lh-address-item li span{line-height:45px;}
+    .lh-select select{line-height:45px; height:45px; border-radius:0;-webkit-appearance: none;}
+    .lh-select:nth-child(2n) select{border:1px solid #5B5D5D !important;}
+    .lh-address-item li.last{margin-top:20px;}
+    .lh-address-item li.last .phone a{line-height:45px;}
+    .lh-address-item li.last>div{height:45px;}
+    .lh-address-item li.last .phone,.lh-address-item li.last .code{width:100%;}
+    .lh-address-item li.last{height:auto;}
+    .lh-address-item li.last .code{margin-top:20px;}
+    .lh-address-item li.last .phone a{line-height:45px; height:45px;}
+    .lh-address-item li.last .phone input{border-right:1px solid #5B5D5D;}
+    .lh-address-item li.last>div input{-webkit-appearance: none;border-radius: 0;}
+    .lh-go{width:100%;}
+    .lh-proDetail-banner,.lh-proDetail-text{width:100%; float:none;}
+    .lh-proDetail-text .name{font-size:20px;}
+    .lh-detailPro-buy .title{height:50px; line-height:50px;}
+    .lh-pro-other li{width:100%; margin-bottom:10px;}
+    .lh-proDetail-text{padding:30px 15px; box-sizing:border-box;}
+    .linkBox{padding:30px 15px;}
+    .link-contact-box li{margin-left:0;}
+    .link-item2{margin-top:20px;}
+}
+
+@media screen and (max-width:641px) {
+    .navbox { width: 80%; }
+    .nav a { font-size: 18px; line-height: 1.5; display: block; }
+    .nav a .cn { font-size: 18px; margin-left: 6px; }
+    .nav .subnav a { font-size: 1.5; font-size: 14px; }
+    .navOpen .navbar-header-toggle { left: auto; right: 0px; }
+    .control-bol { width: 100%; }
+    .control-bol .next { float: right; }
+    .ibox-video { height: 220px; }
+    .ibox-video .play { background-size: cover; width: 40px; height: 40px; margin: -20px 0px 0px -20px; display: block; }
+    .pro-nav a { margin: 0px 8px; font-size: 16px; }
+    .prosharpBox { padding: 42px 0px 42px; }
+    .pager { padding: 40px 0 0; padding: 0;padding-bottom: 40px;}
+
+    #info .pager { padding: 0; }
+    .prosharpBox .shareBtn { display: none; }
+    .csstransitions .nav-close-btn span { background-color: #fff; }
+    .foot { text-align: left; }
+    .link-contact-box li { float: none; width: auto;}
+    .link-contact-box .ewm {padding-top:4rem;margin:0 !important}
+    .link-contact-box li.item1 { width: auto; }
+    .link-contact-box .t { padding: 20px 0px 10px 6px; line-height: 1.8; }
+    .link-contact-box .c { width: auto; padding: 0px 6px; }
+    .link-logo { width: 80px; }
+    .boxC { width: 84%; left: 8%; }
+    .boxC .t { font-size: 16px; }
+    .boxC .c { font-size: 24px; }
+    .iboxItem .t { font-size: 24px; line-height: 1.8; }
+    .iboxItem .by { letter-spacing: 0em; font-size: 16px; }
+    .pageT { font-size: 20px; margin-bottom: 30px; }
+    .h500 { height: 300px; }
+    .h400 { height: 200px; }
+    .workInfoT { font-size: 22px; margin-bottom: 20px; }
+    .contactT { margin-bottom: 30px; font-size: 20px; }
+    .teamT { font-size: 20px; }
+    .teamPage { padding: 50px 0px 20px; }
+    .teamList li { margin-bottom: 20px; }
+    .teamList .title .name { font-size: 20px; }
+    .teamList .imgBox { float: none; width: 100%; }
+    .teamList .con { float: none; width: 90%; padding-bottom: 40px; }
+    .works-nav { margin-bottom: 30px; }
+    .works-nav a { font-size: 18px; margin: 0px 15px; }
+    .works-list .workitem { margin-bottom: 10px; }
+    .con-bot-box.prosharpBox { padding-top: 40px; }
+    .newList .img { position: relative; left: auto; top: auto; width: 100%; height: auto; float: left; display: block; }
+    .newList .con { padding: 0px; height: auto; float: left; display: block; width: 100%; position: static;  margin-top:15px;}
+    .newList .t, .newList .c { font-size: 16px; }
+    .newList .time { position: relative; left: auto; bottom: auto; }
+    .newList .redmore { bottom: 40px; font-size: 10px; background-size: auto 100%; }
+    .infoI .type { font-size: 16px; }
+    .pro-T .t { font-size: 34px; }
+    .pro-nav a { display: inline-block; padding-bottom: 2px; border-bottom: 1px solid #fff; }
+    .prosider { width: 100%; float: none; margin-right: 0px; }
+    .proCon { width: 100%; float: none; }
+    .product-list .name { font-size: 16px; }
+    .product-list .size, .product-list .price { font-size: 14px; }
+    .pbanner2 { height: 240px; }
+    .proRemoendT { font-size: 18px; }
+    .proRemoendT .moreAll { font-size: 14px; margin-top: 0px; }
+    .productT { font-size: 28px; margin-bottom: 25px; }
+    .pager a { font-size: 20px; }
+    .fixed-img, .pro-T { display: none; }
+    .pro-nav { padding: 64px 0px; margin-bottom: 0px; }
+}
+
+@media screen and (max-width:481px) {
+    .iboxItem .t { font-size: 30px; }
+    .boxC .bot { margin: 18px auto; }
+    .works-list .workitem { width: 100%; margin-left: 0px; }
+    .works-list .name, .works-list .type { height: auto; font-size: 16px; }
+    .newList .t, .newList .c { font-size: 14px; }
+    .product-list ul { margin-left: 0px; }
+    .product-list li { margin-left: 0px; width: 100%; float: none; }
+    .remoendProCon .product-list ul { margin-left: 0px; }
+    .remoendProCon .product-list li { width: 100%; float: none; }
+}
+
+@media screen and (max-width: 375px) {
+    .iboxItem .t { font-size: 20px; }
+    .iboxItem .by { font-size: 12px; }
+    .boxC .c { font-size: 20px; }
+    .pbanner2 { height: 200px; }
+    .proInfoDemo .imgBox .img { width: 100%; }
+    .productT { font-size: 22px; }
+}
+
+@media screen and (max-width: 360px) {
+    .iboxItem .by { font-size: 12px; }
+    .iboxItem .t { font-size: 18px; }
+    .boxC .c { font-size: 18px; }
+    .newList .img { float: none; width: 100%; margin-right: 0px; }
+    .newList .con { width: 100%; float: none; margin-top: 25px; }
+    .pager { width: 100%; }
+}

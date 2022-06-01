@@ -9,8 +9,8 @@ class NavController extends PortControllerBase{
 
     //返回导航栏
     public function index(){
-        $model = new NavInfo();
-        $navList = $model->order("order",'desc')->select();
+//        $model = new NavInfo();
+        $navList = NavInfo::getListAll();
         return  $this->port(1,"success",$navList);
     }
 }

@@ -79,8 +79,9 @@ layui.config({
         return layer.msg('上传失败');
       }
       //上传成功
-      $('#demo1 input').attr('value',res.data);
-      $('#demo1 img').attr('src',res.data);
+      console.log(res.data)
+      $('#demo1 input').attr('value',res.data.key);
+      $('#demo1 img').attr('src',res.data.key);
     }
   });
   

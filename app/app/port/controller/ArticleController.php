@@ -81,9 +81,9 @@ class ArticleController extends PortControllerBase
             return $this->port(0,'内容不存在或已下架');
         }
         Db::name('article')->where('id',$this->param('id'))->setInc('read');
-        if($this->field === '*' or in_array('thumb', $this->field)){
-            $article_info['thumb'] = $this->setThumb($article_info['thumb']);
-        }
+//        if($this->field === '*' or in_array('thumb', $this->field)){
+//            $article_info['thumb'] = $this->setThumb($article_info['thumb']);
+//        }
 //        if($this->field === '*' or in_array('content', $this->field)){
 //            $article_info['content'] = preg_replace('/src=\\"/', 'src="'.config('webconfig.domain'), $article_info['content']);
 //        }
@@ -113,11 +113,11 @@ class ArticleController extends PortControllerBase
    }
 
    public function getProjectList(){
-        $cateList = ArticleCate::All(['pid' => 2]);
-        $artcile = Db::table("wy_article")->alias('a')
+        $cateList = ArticleCate::All(['pid' => 1]);
+        $artcile = Db::table("ww_article")->alias('a')
             ->field(['a.*'])
-            ->where('b.pid','=','2')
-            ->join('wy_article_cate b','a.article_cate_id = b.id','left')
+            ->where('b.pid','=','1')
+            ->join('ww_article_cate b','a.article_cate_id = b.id','left')
             ->select();
         return $this->port(1,'success',['cate'=> $cateList,'article_list' => $artcile]);
    }

@@ -33,11 +33,12 @@ $('.home-slide').flexslider({
 /*-----------------------------------------------------------------------------------*/
 /* 	SLIDER REVOLUTION
 /*-----------------------------------------------------------------------------------*/
+
 jQuery('.tp-banner').show().revolution({
 	dottedOverlay:"none",
 	delay:10000,
-	startwidth:1170,
-	startheight:900,
+	startwidth:$(window).width(),
+	startheight:$(window).height(),
 	navigationType:"",
 	navigationArrows:"solo",
 	navigationStyle:"preview1",

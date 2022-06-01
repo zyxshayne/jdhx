@@ -1,0 +1,1 @@
+var confg = {"site":"http://api.winwin.com/"}

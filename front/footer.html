@@ -1,0 +1,78 @@
+<footer>
+    <div class="container">
+
+        <!-- FOOTER -->
+        <div class="footer-info">
+            <div class="row">
+
+                <!-- keep in touch -->
+                <div class="col-md-4">
+                    <div class="padding-right-50"><img src="images/logo.png" class="margin-bottom-30" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at purus varius odio tempus
+                            cursu.</p>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="col-md-2">
+                    <h6>Links</h6>
+                    <ul class="links">
+                        <li><a href="index.html">WIN-WIN </a></li>
+                        <li><a href="index.html">DESIGN </a></li>
+                        <li><a href="joinus.html">JOIN US</a></li>
+                    </ul>
+                </div>
+
+                <!-- INSTAGRAM  -->
+                <div class="col-md-3">
+                    <h6>iNSTAGRAM with us</h6>
+                    <div class="flicker-img">
+                        <ul>
+                            <li><a href="#."><img src="images/flicker-img-1.jpg" alt=""> </a></li>
+                            <li><a href="#."><img src="images/flicker-img-2.jpg" alt=""> </a></li>
+<!--                            <li><a href="#."><img src="images/flicker-img-3.jpg" alt=""> </a></li>-->
+<!--                            <li><a href="#."><img src="images/flicker-img-4.jpg" alt=""> </a></li>-->
+<!--                            <li><a href="#."><img src="images/flicker-img-5.jpg" alt=""> </a></li>-->
+<!--                            <li><a href="#."><img src="images/flicker-img-6.jpg" alt=""> </a></li>-->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- keep in touch -->
+                <div class="col-md-3">
+                    <div class="widget" id="qrcode">
+                        <h6>WECHAT</h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="rights">
+    <div class="container" id="copyright">
+
+    </div>
+</div>
+<script>
+    $(function () {
+        $.ajax({
+            url:confg.site+"port/index/siteAndCompany",
+            type:'get',
+            dataType:'json',
+            async: false,
+            success:function(res) {
+                if(res.code === 1) {
+                    //执行渲染Nav
+                    ShowHeadAndFooter(res.data);
+
+                }
+            }
+        })
+    })
+    function ShowHeadAndFooter(data) {
+        var footerSite = '<p>Copyright &copy; 2022.'+data.company.name+' All rights reserved.<a target="_blank" href="'+data.site.domain+'">&nbsp;&nbsp;&nbsp;备案号：湘'+data.site.icp+'</a><a target="_blank" href="'+data.site.domain+'"></a></p>'
+        $('#copyright').append(footerSite)
+        $('#qrcode').append('<img src="'+data.company.weixin+'">')
+    }
+</script>

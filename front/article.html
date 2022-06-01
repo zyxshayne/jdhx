@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -61,6 +61,9 @@
             position: relative;
             height: 100%;
         }
+        .test img{
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -78,10 +81,10 @@
                     <!-- Navigation -->
                     <nav class="navbar webimenu">
                         <!-- MENU BUTTON RESPONSIVE -->
-                        <div class="menu-toggle"><i class="fa fa-bars"> </i></div>
+                        <div class="menu-toggle"></div>
                         <!-- NAV -->
-                        <ul class="nav ownmenu">
-                        </ul>
+                            <ul class="nav ownmenu">
+                            </ul>
                     </nav>
                 </div>
             </div>
@@ -111,6 +114,12 @@
     <!-- Content -->
     <div id="content">
 
+        <!-- Welcome -->
+        <section class="padding-top-20 padding-bottom-20">
+            <div class="container test" id="container-article">
+
+            </div>
+        </section>
     </div>
 
     <!--======= FOOTER =========-->
@@ -124,72 +133,53 @@
 <script src="js/common.js"></script>
 <script>
     $(function () {
+        var id = getUrlParams('id')
+        $('.footerpage').load("./footer.html")
         $.ajax({
-            url: confg.site+"port/index/index",
-            type: 'get',
-            dataType: 'json',
+            url:confg.site+"port/article/getArticleInfo?id="+id,
+            type:'get',
+            dataType:'json',
             async: false,
-            success: function (res) {
-                if (res.code === 1) {
-                    //执行渲染banner
-                    ShowBanner(res.data.banner)
-                    // ShowService(res.data.service)
-                    // ShowOrganization(res.data.about)
-                    // ShowProjectAndProduct(res.data.project, res.data.product)
+            success:function(res) {
+                if(res.code === 1) {
+                    showArtilce(res.data)
                 }
             }
         })
-    })
-    //展示banner
-    function ShowBanner(banner) {
-        for(i=0;i<banner.length;i++){
 
-            var str = ' <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">'
-                str +='<img src="'+banner[i].img+'" alt="home_slider3" data-bgposition="center center">'+
-                       '<div class="tp-caption font-bold tp-resizeme"\n' +
-                    '                             data-x="center" data-hoffset="0"\n' +
-                    '                             data-y="center" data-voffset="-60"\n' +
-                    '                             data-speed="100"\n' +
-                    '                             data-start="800"\n' +
-                    '                             data-easing="Power3.easeInOut"\n' +
-                    '                             data-splitin="chars"\n' +
-                    '                             data-splitout="none"\n' +
-                    '                             data-elementdelay="0.1"\n' +
-                    '                             data-endelementdelay="0.1"\n' +
-                    '                             data-endspeed="300"\n' +
-                    '                             style="z-index: 5; font-size:45px; color:#fff; max-width: auto; text-transform:uppercase; max-height: auto; white-space: nowrap;">\n' +
-                    banner[i].title +
-                    '                        </div>'
-                str+='                        <div class="tp-caption font-bold tp-resizeme"\n' +
-                '                             data-x="center" data-hoffset="0"\n' +
-                '                             data-y="center" data-voffset="0"\n' +
-                '                             data-speed="100"\n' +
-                '                             data-start="800"\n' +
-                '                             data-easing="Power3.easeInOut"\n' +
-                '                             data-splitin="chars"\n' +
-                '                             data-splitout="none"\n' +
-                '                             data-elementdelay="0.1"\n' +
-                '                             data-endelementdelay="0.1"\n' +
-                '                             data-endspeed="300"\n' +
-                '                             style="z-index: 5; font-size:25px; color:#a9a9a9; max-width: auto; text-transform:uppercase; max-height: auto; white-space: nowrap;">\n' +
-                    banner[i].desc+
-                '                        </div>\n' +
-                '                        <!-- LAYER NR. 4 -->\n' +
-                '                        <div class="tp-caption lfb tp-resizeme"\n' +
-                '                             data-x="center" data-hoffset="0"\n' +
-                '                             data-y="center" data-voffset="150"\n' +
-                '                             data-speed="800"\n' +
-                '                             data-start="2200"\n' +
-                '                             data-easing="Power3.easeInOut"\n' +
-                '                             data-elementdelay="0.1"\n' +
-                '                             data-endelementdelay="0.1"\n' +
-                '                             data-endspeed="300"\n' +
-                '                             data-scrolloffset="0"\n' +
-                '                             style="z-index: 8;">\n' +
-                '                            <a href="#." class="btn btn-white">Explore</a>\n' +
-                '                        </div></li>'
-            $('#banner').append(str)
-        }
+    })
+    function showArtilce(article) {
+        var str = ' <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">'
+        str +='<img src="'+article.thumb+'" alt="home_slider3" data-bgposition="center center">'+
+            '<div class="tp-caption font-bold tp-resizeme"\n' +
+            '                             data-x="center" data-hoffset="0"\n' +
+            '                             data-y="center" data-voffset="-60"\n' +
+            '                             data-speed="100"\n' +
+            '                             data-start="800"\n' +
+            '                             data-easing="Power3.easeInOut"\n' +
+            '                             data-splitin="chars"\n' +
+            '                             data-splitout="none"\n' +
+            '                             data-elementdelay="0.1"\n' +
+            '                             data-endelementdelay="0.1"\n' +
+            '                             data-endspeed="300"\n' +
+            '                             style="z-index: 5; font-size:45px; color:#fff; max-width: auto; text-transform:uppercase; max-height: auto; white-space: nowrap;">\n' +
+            article.title +
+            '                        </div>'
+        str+='                        <div class="tp-caption font-bold tp-resizeme"\n' +
+            '                             data-x="center" data-hoffset="0"\n' +
+            '                             data-y="center" data-voffset="0"\n' +
+            '                             data-speed="100"\n' +
+            '                             data-start="800"\n' +
+            '                             data-easing="Power3.easeInOut"\n' +
+            '                             data-splitin="chars"\n' +
+            '                             data-splitout="none"\n' +
+            '                             data-elementdelay="0.1"\n' +
+            '                             data-endelementdelay="0.1"\n' +
+            '                             data-endspeed="300"\n' +
+            '                             style="z-index: 5; font-size:25px; color:#a9a9a9; max-width: auto; text-transform:uppercase; max-height: auto; white-space: nowrap;">\n' +
+            article.desc+'</div></li>'
+        $('#banner').append(str)
+        $('#container-article').append(article.content)
     }
 </script>
 <script src="js/bootstrap.min.js"></script>

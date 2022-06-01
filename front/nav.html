@@ -1,0 +1,81 @@
+<!-- header -->
+<div class="nav">
+    <header class="header-normal">
+        <div class="sticky">
+            <div class="container">
+                <!-- Logo -->
+                <div class="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""></a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="navbar webimenu">
+                    <!-- MENU BUTTON RESPONSIVE -->
+                    <div class="menu-toggle"><i class="fa fa-bars"> </i></div>
+                    <!-- NAV -->
+                    <ul class="nav ownmenu">
+                        <li class="active"><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html"> PORTFOLIO </a>
+                            <ul class="dropdown animated-3s fadeIn">
+                                <li><a href="portoflio_1.html">portoflio 1</a></li>
+                                <li><a href="portoflio_2.html">portoflio 2</a></li>
+                                <li><a href="portoflio_3.html">portoflio 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html">Pages</a>
+                            <ul class="dropdown animated-3s fadeIn">
+                                <li><a href="index.html">index Default</a></li>
+                                <li><a href="index-1.html">index 1</a></li>
+                                <li><a href="about_1.html">about 1</a></li>
+                                <li><a href="about_2.html">about 2</a></li>
+                                <li><a href="services.html">services 1</a></li>
+                                <li><a href="portoflio_1.html">portoflio 1</a></li>
+                                <li><a href="portoflio_2.html">portoflio 2</a></li>
+                                <li><a href="portoflio_3.html">portoflio 3</a></li>
+                                <li><a href="blog.html">blog </a></li>
+                                <li><a href="blog-single.html">Clog Single</a></li>
+                                <li><a href="contact.html">contact </a></li>
+                                <li><a href="contact-1.html">contact 1</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+</div>
+<script>
+    $(function () {
+        $.ajax({
+            url: confg.site+"port/nav/index",
+            type: 'get',
+            dataType: 'json',
+            async: false,
+            success: function (res) {
+                if (res.code === 1) {
+                    //执行渲染banner
+                    // ShowBanner(res.data.banner)
+                    ShowNav(res.data)
+                }
+            }
+        })
+    })
+    function  ShowNav(data){
+        for (i=0;i<data.length;i++){
+
+            if(data[i].children.length!=0){
+                var str = '<li ><a href="'+data[i].src+'">'+data[i].title+'</a><ul class="dropdown animated-3s fadeIn">'
+                for(j=0;j<data[i].children.length;j++){
+                    str += '<li><a href="'+data[i].children[j].src+'">'+data[i].children[j].title+'</a></li>'
+                }
+                str += '</ul></li>'
+                $('.ownmenu').append(str)
+            }else{
+                $('.ownmenu').append('<li class="active"><a href="'+data[i].src+'">'+data[i].title+'</a></li>')
+            }
+        }
+    }
+</script>

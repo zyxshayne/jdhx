@@ -31,23 +31,23 @@ class IndexController extends PortControllerBase
        //查询服务范围
        $cateModel  = new ArticleCate();
        $service = $cateModel->field(['title','desc','id'])->where("pid","in",function ($query){
-           $query->table("wy_article_cate")->where("title","服务范畴")->field('id');
+           $query->table("ww_article_cate")->where("title","服务范畴")->field('id');
        })->select();
        $aboutus = Article::get(['title' => "关于我们"]);
-       $product =  Db::table('wy_article')
+       $product =  Db::table('ww_article')
            ->alias('a')
            ->field(['a.*'])
            ->where('b.pid' ,'=',17)
            ->order(['a.create_time' => 'desc'])
-           ->join('wy_article_cate b','a.article_cate_id = b.id','left')
+           ->join('ww_article_cate b','a.article_cate_id = b.id','left')
            ->limit(6)
            ->select();
-       $project =  Db::table('wy_article')
+       $project =  Db::table('ww_article')
            ->alias('a')
            ->field(['a.*'])
            ->where('b.pid' ,'=',2)
            ->order(['a.create_time' => 'desc'])
-           ->join('wy_article_cate b','a.article_cate_id = b.id','left')
+           ->join('ww_article_cate b','a.article_cate_id = b.id','left')
            ->limit(4)
            ->select();
 
@@ -68,7 +68,7 @@ class IndexController extends PortControllerBase
     public function siteAndCompany(){
        $company = Company::get(['id' => 1]);
        $site = Config::get('webconfig');
-        $news = Db::table('wy_article')
+        $news = Db::table('ww_article')
             ->alias('a')
             ->field(['a.*'])
             ->where('article_cate_id' ,'in',[11,12])

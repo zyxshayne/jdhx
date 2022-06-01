@@ -184,6 +184,15 @@ a:hover, a:focus {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
+.position-center-bottom {
+	left: 50%;
+	position: absolute;
+	top: 70%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
 .white-bg {
 	background: #fff !important;
 }
@@ -726,6 +735,12 @@ header.header-1 .ownmenu {
 }
 .header-normal .ownmenu > li > .megamenu {
 	top: 93px;
+}
+.project-div{
+	width: 100%;
+	height: 100%;
+	background: #0C0C0C;
+
 }
 .is-sticky {
 	height: auto !important;
@@ -1611,7 +1626,8 @@ header .container {
 	float: left;
 }
 .col-3 .portfolio-item {
-	width: 33.3333%;
+	width: 33.1%;
+	margin: 1px 1px;
 	position: relative;
 }
 /*=======================================================
@@ -3908,7 +3924,7 @@ footer h6 {
 	letter-spacing: 1.5px;
 }
 footer {
-	padding: 90px 0;
+	padding: 10px 0;
 	background: #212121;
 }
 .flicker-img ul {

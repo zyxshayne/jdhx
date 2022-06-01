@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="M_Adnan">
+    <title></title>
+
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="rs-plugin/rs-plugin/css/settings.css" media="screen"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- COLORS -->
+    <link rel="stylesheet" id="color" href="css/default.css">
+
+    <!-- JavaScripts -->
+    <script src="js/modernizr.js"></script>
+
+    <!--<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900,100' rel='stylesheet' type='text/css'>--->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<!-- Wrap -->
+<div id="wrap">
+
+    <!-- header -->
+    <header class="header-normal">
+        <div class="sticky">
+            <div class="container">
+                <!-- Logo -->
+                <div class="logo"><a href="#."><img class="img-responsive" src="images/logo.png" alt=""></a></div>
+
+                <!-- Navigation -->
+                <nav class="navbar webimenu">
+                    <!-- MENU BUTTON RESPONSIVE -->
+                    <div class="menu-toggle"><i class="fa fa-bars"> </i></div>
+                    <!-- NAV -->
+                    <ul class="nav ownmenu">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--======= HOME MAIN SLIDER =========-->
+    <!--    <section class="sub-bnr" data-stellar-background-ratio="0.5">-->
+    <!--        <div class="position-center-center">-->
+    <!--            <div class="container">-->
+    <!--                <h3>Our Work</h3>-->
+    <!--                <hr>-->
+    <!--                <ol class="breadcrumb">-->
+    <!--                    <li><a href="#">Home</a></li>-->
+    <!--                    <li class="active">Portfolio</li>-->
+    <!--                </ol>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+    <!-- Content -->
+    <div id="content">
+
+
+        <!-- PORTFOLIO -->
+        <div class="container">
+
+            <div class="portfolio port-wrap padding-top-100 padding-bottom-80">
+
+                <!-- Work Filter -->
+                <ul class="portfolio-filter text-center margin-bottom-80" id="cate">
+
+                </ul>
+
+                <!-- PORTFOLIO ITEMS -->
+
+                <div class="items row col-3" id="article-list">
+
+                    <!-- ITEM -->
+                </div>
+            </div>
+
+
+            <!-- VIEW MORE -->
+            <div class="text-center padding-bottom-100">
+<!--                <a href="#." class="btn">VIEW MORE</a>-->
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!--======= FOOTER =========-->
+    <div class="footerpage"></div>
+</div>
+
+<!-- JavaScripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url:confg.site+'port/article/getProjectList',
+            type:'get',
+            dataType:'json',
+            async: false,
+            success:function(res) {
+                if(res.code === 1) {
+                    //执行渲染Nav
+                    ShowCate(res.data.cate,res.data.article_list);
+                }
+            }
+        })
+    })
+    function ShowCate(cateList,article) {
+
+        var id = getUrlParams('id')
+        console.log(id)
+        if(id==null){
+            $("#cate").append('<li><a class="active" href="#." data-filter="*">ALL</a></li>')
+        }else{
+            $("#cate").append('<li><a  href="#." data-filter="*">ALL</a></li>')
+        }
+        for(i=0;i<cateList.length;i++){
+            if(cateList[i].id==id){
+                $("#cate").append('<li><a class="active" href="#" data-filter=".'+cateList[i].id+'">'+cateList[i].title+'</a></li>')
+            }else{
+                $("#cate").append('<li><a  href="#" data-filter=".'+cateList[i].id+'">'+cateList[i].title+'</a></li>')
+            }
+            // $("#cate").append('<li><a id="a'+cateList[i].id+'" href="#" data-filter=".'+cateList[i].id+'">'+cateList[i].title+'</a></li>')
+        }
+        for (i=0;i<article.length;i++){
+
+            var str = '<article class="portfolio-item '+article[i].article_cate_id+'">\n' +
+                '                        <div class="portfolio-image"><a href="article.html"> <img alt="" src="'+article[i].thumb+'"> </a></div>\n' +
+                '                        <div class="portfolio-overlay">\n' +
+                '                            <div class="position-center-center"><a href="article.html?id='+article[i].id+'"><i class="ion-link"></i></a></div>\n' +
+                '                            <div class="position-center-bottom"><span>'+article[i].title+'</span></div>\n' +
+                '                        </div>\n' +
+                '                    </article>'
+            $('#article-list').append(str)
+
+        }
+    }
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/own-menu.js"></script>
+<script src="js/jquery.lighter.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/color-switcher.js"></script>
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+<script type="text/javascript" src="rs-plugin/rs-plugin/js/jquery.tp.t.min.js"></script>
+<script type="text/javascript" src="rs-plugin/rs-plugin/js/jquery.tp.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

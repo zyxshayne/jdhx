@@ -290,7 +290,7 @@ return [
     'qiniu' => [
         'Access_Key' => 'JjYpkInI24IVwVnLdC8S24k7Cf0UHw9y26obAVTR',
         'Secret_Key' => 'DPXS7Mm8NzQMFhy8BlsI2ShFm4ABH2lCPvA2g_Ku',
-        'Bucket'    =>  'shayne-qy',
-        'Domain'    =>  'http://rcfgsdrlf.hn-bkt.clouddn.com'
+        'Bucket'    =>  'shayne-jdhx',
+        'Domain'    =>  'http://cdn.fooje.cn'
     ]
 ];
