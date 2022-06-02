@@ -74,8 +74,20 @@
             <div class="layui-upload">
                 <button type="button" class="layui-btn" id="test1">上传微信二维码</button>
                 <div class="layui-upload-list" id="demo1">
-                    <img src="{$company.weixin}" />
+                    <img style="height: 80px;width: 80px" src="{$company.weixin}" />
                     <input type="hidden" name="weixin" value="{$company.weixin}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">QQ</label>
+        <div class="layui-input-inline">
+            <div class="layui-upload">
+                <button type="button" class="layui-btn" id="test2">上传QQ二维码</button>
+                <div class="layui-upload-list" id="demo2">
+                    <img  style="height: 80px;width: 80px" src="{$company.qq}" />
+                    <input type="hidden" name="qq" value="{$company.qq}">
                 </div>
             </div>
         </div>
@@ -111,6 +123,19 @@
                 //上传成功
                 $('#demo1 input').attr('value',res.data.key);
                 $('#demo1 img').attr('src',res.data.key);
+            }
+        });
+        var uploadInst = upload.render({
+            elem: '#test2'
+            ,url: '/admin/api/upload'
+            ,done: function(res){
+                //如果上传失败
+                if(res.code == 0){
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+                $('#demo2 input').attr('value',res.data.key);
+                $('#demo2 img').attr('src',res.data.key);
             }
         });
 

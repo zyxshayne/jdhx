@@ -54,6 +54,26 @@ jQuery('.tp-banner').show().revolution({
 	forceFullWidth:"off",	
 	fullScreenOffsetContainer:""	
 });
+jQuery('.tp-banner2').show().revolution({
+	dottedOverlay:"none",
+	delay:10000,
+	startwidth:$(window).width(),
+	startheight:$(window).height(),
+	navigationType:"",
+	navigationArrows:"solo",
+	navigationStyle:"preview1",
+	parallax:"mouse",
+	parallaxBgFreeze:"on",
+	parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+	keyboardNavigation:"on",
+	shadow:0,
+	fullWidth:"on",
+	fullScreen:"off",
+	shuffle:"off",
+	autoHeight:"off",
+	forceFullWidth:"off",
+	fullScreenOffsetContainer:""
+});
 /*-----------------------------------------------------------------------------------*/
 /*	ISOTOPE PORTFOLIO
 /*-----------------------------------------------------------------------------------*/

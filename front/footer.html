@@ -6,11 +6,8 @@
             <div class="row">
 
                 <!-- keep in touch -->
-                <div class="col-md-4">
-                    <div class="padding-right-50"><img src="images/logo.png" class="margin-bottom-30" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at purus varius odio tempus
-                            cursu.</p>
-                    </div>
+                <div class="col-md-4" id="address">
+
                 </div>
 
                 <!-- Links -->
@@ -25,24 +22,19 @@
 
                 <!-- INSTAGRAM  -->
                 <div class="col-md-3">
-                    <h6>iNSTAGRAM with us</h6>
+                    <h6>WINWIN   &nbsp;&nbsp;&nbsp;  WECHAT</h6>
                     <div class="flicker-img">
-                        <ul>
-                            <li><a href="#."><img src="images/flicker-img-1.jpg" alt=""> </a></li>
-                            <li><a href="#."><img src="images/flicker-img-2.jpg" alt=""> </a></li>
-<!--                            <li><a href="#."><img src="images/flicker-img-3.jpg" alt=""> </a></li>-->
-<!--                            <li><a href="#."><img src="images/flicker-img-4.jpg" alt=""> </a></li>-->
-<!--                            <li><a href="#."><img src="images/flicker-img-5.jpg" alt=""> </a></li>-->
-<!--                            <li><a href="#."><img src="images/flicker-img-6.jpg" alt=""> </a></li>-->
+                        <ul id="qrcode">
                         </ul>
                     </div>
                 </div>
 
                 <!-- keep in touch -->
                 <div class="col-md-3">
-                    <div class="widget" id="qrcode">
-                        <h6>WECHAT</h6>
-
+                    <div class="widget" >
+                        <h6>Contract</h6>
+                        <div id="contract" style="color: #BDC3C7">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,6 +65,19 @@
     function ShowHeadAndFooter(data) {
         var footerSite = '<p>Copyright &copy; 2022.'+data.company.name+' All rights reserved.<a target="_blank" href="'+data.site.domain+'">&nbsp;&nbsp;&nbsp;备案号：湘'+data.site.icp+'</a><a target="_blank" href="'+data.site.domain+'"></a></p>'
         $('#copyright').append(footerSite)
-        $('#qrcode').append('<img src="'+data.company.weixin+'">')
+        // $('#qrcode').append('<img src="'+data.company.weixin+'">')
+        //logo
+        $('.logo').append('<a href="index.html"><img class="img-responsive"  src="'+data.site.logo+'" alt=""></a>')
+        //地址
+        $('#address').append(' <div class="padding-right-50"><img  style="width: 150px;height: 29px" src="'+data.site.logo+'" class="margin-bottom-15 padding-right-30" alt="">\n' +
+            '                       <p>'+data.company.address+'</p>\n' +
+            '                    </div>')
+        //二维码
+        $('#qrcode').append('<li><img style="width: 80px;height: 80px" src="'+data.company.weixin+'" alt=""></li>')
+        $('#qrcode').append('<li><img style="width: 80px;height: 80px" src="'+data.company.qq+'" alt=""></li>')
+        //联系方式
+        $('#contract').append(' <i class="ion-email"></i><span>&nbsp;&nbsp;'+data.company.email+'</span>\n' +
+            '                         <p></p>\n' +
+            '                        <i class="ion-android-call"></i><span>&nbsp;&nbsp;'+data.company.tel+'</span>')
     }
 </script>

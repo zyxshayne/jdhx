@@ -49,6 +49,16 @@ header .ownmenu {
 .top-info-con ul li {
 	width: 27%;
 }
+	.portfolio .box-title {
+		top: 20%;
+		font-size: 40px;
+	}
+	.portfolio .box-desc {
+
+		top: 40%;
+		font-size: 30px;
+
+	}
 .fst-up {
 	margin-top: 0px;
 }
@@ -388,7 +398,8 @@ header {
 	padding: 0px;
 }
 header .logo {
-	width: 100%;
+	width: 150px;
+	height: 43px;
 	margin: 0px;
 	text-align: center;
 	border: none;
@@ -476,7 +487,8 @@ header .logo a {
 	margin-bottom: 30px;
 }
 header .logo {
-	height: auto;
+	width: 150px;
+	height: 43px;
 	overflow: hidden;
 }
 header .logo:before {
@@ -586,12 +598,32 @@ header.header-1 .logo {
 	width: 50%;
 	float: left;
 }
+	 .portfolio .box-title {
+		 top: 15%;
+		 font-size: 40px;
+	 }
+	 .portfolio .box-desc {
+
+		 top: 30%;
+		 font-size: 25px;
+
+	 }
 }
 @media(max-width:767px) {
 .clients-img li {
 	width: 33.3333%;
 	margin-bottom: 30px;
 }
+	.portfolio .box-title {
+		top: 8%;
+		font-size: 35px;
+	}
+	.portfolio .box-desc {
+
+		top: 12%;
+		font-size: 25px;
+
+	}
 .webimenu ul .sub-menu > a:after {
 	content: '\f105';
 	margin: 0;
@@ -816,6 +848,8 @@ header .logo:after {
 	right: 0px;
 }
 header .logo {
+	width: 150px;
+	height: 43px;
 	margin: 0px;
 	padding: 10px 0;
 }
@@ -832,7 +866,8 @@ header .logo a {
 }
 header .logo {
 	position: relative;
-	width: 100%;
+	width: 150px;
+	height: 43px;
 	text-align: center;
 }
 header.header-1 .is-sticky .sticky .menu-toggle {
@@ -1006,7 +1041,8 @@ header {
 	padding: 0px;
 }
 header .logo {
-	width: auto;
+	width: 150px;
+	height: 43px;
 	padding: 20px 0px;
 	text-align: center;
 	border: none;
@@ -1233,6 +1269,16 @@ body.margin-50 .space-nav .is-sticky .sticky {
 .col-4.gallery .item {
 	width: 100%;
 }
+	.portfolio .box-title {
+		top: 8%;
+		font-size: 35px;
+	}
+	.portfolio .box-desc {
+
+		top: 12%;
+		font-size: 25px;
+
+	}
 	.col-3 .portfolio-item{
 		width: 50%;
 		float: left;
@@ -1249,6 +1295,17 @@ body.margin-50 .space-nav .is-sticky .sticky {
 .feature-item li {
 	width: 100%;
 }
+	/*字体大小*/
+	.portfolio .box-title {
+		top: 5%;
+		font-size: 30px;
+	}
+	.portfolio .box-desc {
+
+		top: 10%;
+		font-size: 20px;
+
+	}
 .feature-item {
 	padding: 0px !important;
 }
@@ -1299,6 +1356,17 @@ header.header-1 .is-sticky .sticky .social_icons {
 .top-info-con ul li {
 	width: 100%;
 }
+/*	字体大小*/
+.portfolio .box-title {
+	top: 5%;
+	font-size: 30px;
+}
+.portfolio .box-desc {
+
+	top: 10%;
+	font-size: 20px;
+
+}
 .top-info-con ul li.lst {
 	width: 100%;
 }
@@ -1336,6 +1404,16 @@ header .logo:before {
 	.col-3 .portfolio-item{
 		width: 100%;
 		float: left;
+	}
+	.portfolio .box-title {
+		top: 5%;
+		font-size: 30px;
+	}
+	.portfolio .box-desc {
+
+		top: 10%;
+		font-size: 20px;
+
 	}
 }
 @media(max-height: 700px) {

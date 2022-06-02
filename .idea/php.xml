@@ -15,6 +15,7 @@
       <path value="$PROJECT_DIR$/app/vendor/topthink/think-installer" />
       <path value="$PROJECT_DIR$/app/vendor/workerman/workerman" />
       <path value="$PROJECT_DIR$/app/vendor/composer" />
+      <path value="$PROJECT_DIR$/app/vendor/phpmailer/phpmailer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />

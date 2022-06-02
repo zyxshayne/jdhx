@@ -67,6 +67,19 @@
     </div>
   </div>
   <div class="layui-form-item">
+    <label class="layui-form-label">是否热门</label>
+    <div class="layui-input-block">
+      <input type="radio" name="is_hot" value="1" title="是" checked>
+      <input type="radio" name="is_hot" value="-0" title="否">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">排序</label>
+    <div class="layui-input-block" style="max-width: 600px;">
+      <input type="text" name="sort" lay-verify="required" autocomplete="off" placeholder="请输入排序值" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
     <div class="layui-input-block">
       <button class="layui-btn" lay-submit="" lay-filter="vaeform">立即提交</button>
       <button type="reset" class="layui-btn layui-btn-primary">重置</button>

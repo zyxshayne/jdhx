@@ -12,7 +12,7 @@
     <script src="js/jquery.min.js"></script>
     <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
     <link rel="stylesheet" type="text/css" href="rs-plugin/rs-plugin/css/settings.css" media="screen"/>
-
+    <link rel="shortcut icon" href="favicon.ico"  type="image/x-icon"/>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -72,7 +72,7 @@
             <div class="sticky">
                 <div class="container">
                     <!-- Logo -->
-                    <div class="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""></a>
+                    <div class="logo" style="">
                     </div>
 
                     <!-- Navigation -->
@@ -111,6 +111,7 @@
     <!-- Content -->
     <div id="content">
 
+
     </div>
 
     <!--======= FOOTER =========-->
@@ -133,9 +134,7 @@
                 if (res.code === 1) {
                     //执行渲染banner
                     ShowBanner(res.data.banner)
-                    // ShowService(res.data.service)
-                    // ShowOrganization(res.data.about)
-                    // ShowProjectAndProduct(res.data.project, res.data.product)
+                    ShowArticle(res.data.article)
                 }
             }
         })
@@ -189,6 +188,20 @@
                 '                            <a href="#." class="btn btn-white">Explore</a>\n' +
                 '                        </div></li>'
             $('#banner').append(str)
+        }
+    }
+    function ShowArticle(article) {
+        for(i=0;i<article.length;i++){
+            var str = ' <section class="portfolio port-wrap">  <div class="tp-banner-container">  ' +
+                ' <div class="tp-banner2"><ul>' +
+                '<li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">' +
+                '<a href="article.html?id='+article[i].id+'">'+
+                '<img class="box-img" src="'+ article[i].thumb+'" alt="home_slider3" data-bgposition="center center">'+
+                '</a>' +
+                '<div class="box-title">'+article[i].title+'</div>'+
+                '<div class="box-desc">'+article[i].title+'</div>'+
+                '</li></ul></div></div></section>'
+            $('#content').append(str)
         }
     }
 </script>

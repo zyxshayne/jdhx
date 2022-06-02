@@ -41,13 +41,13 @@
 				<div class="layui-form-item">
 					<!--<label class="layui-form-label">账号</label>-->
 					<div class="layui-input-inline pm-login-input">
-						<input type="text" name="username" lay-verify="required"  value="admin" placeholder="请输入账号" autocomplete="off" class="layui-input">
+						<input type="text" name="username" lay-verify="required"  placeholder="请输入账号" autocomplete="off" class="layui-input">
 					</div>
 				</div>
 				<div class="layui-form-item">
 					<!--<label class="layui-form-label">密码</label>-->
 					<div class="layui-input-inline pm-login-input">
-						<input type="password" name="password" lay-verify="required" value="123456" placeholder="请输入密码" class="layui-input">
+						<input type="password" name="password" lay-verify="required" placeholder="请输入密码" class="layui-input">
 					</div>
 				</div>
 				<div class="layui-form-item">
@@ -72,7 +72,6 @@
 			layui.use(['form'], function () {
 		        var form = layui.form,$ = layui.$;
 		        form.on('submit(btn-submit)', function(data) {
-		        	console.log(11111)
                     $.ajax({
                         url:"/admin/publicer/loginSubmit",
                         data: data.field,

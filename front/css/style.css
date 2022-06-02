@@ -509,11 +509,14 @@ header .navbar {
 	float: right;
 }
 header .logo {
+	width: 150px;
+	height: 43px;
 	float: left;
 	position: relative;
 	margin-top: 30px;
 }
 header .logo img {
+	width: 100%;
 	z-index: 3;
 	position: relative;
 }
@@ -5967,4 +5970,35 @@ body.margin-50:before {
 }
 body.margin-50 .space-nav .is-sticky .sticky {
 	margin-top: 50px;
+}
+
+.portfolio  .box-img {
+	width: 100%;
+	position: absolute;/*设为绝对定位*/
+	z-index: -1;/*置于底层*/
+}
+.portfolio .box-title {
+	width: inherit;
+	text-align: center;
+	top: 40%;
+	font-size: 45px;
+	white-space: nowrap;
+	text-transform: uppercase;
+	line-height: 64px;
+	color: white;
+	position: absolute;/*设为绝对定位*/
+}
+.portfolio .box-desc {
+	width: inherit;
+	text-align: center;
+	top: 50%;
+	font-size: 30px;
+	white-space: nowrap;
+	text-transform: uppercase;
+	line-height: 32px;
+	color: white;
+	position: absolute;/*设为绝对定位*/
+}
+.tp-banner2{
+	touch-action: none;
 }

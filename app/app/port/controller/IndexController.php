@@ -28,31 +28,10 @@ class IndexController extends PortControllerBase
        //查询轮播图
        $model= new SlideInfo();
        $banner = $model->select();
-       //查询服务范围
-       $cateModel  = new ArticleCate();
-       $service = $cateModel->field(['title','desc','id'])->where("pid","in",function ($query){
-           $query->table("ww_article_cate")->where("title","服务范畴")->field('id');
-       })->select();
-       $aboutus = Article::get(['title' => "关于我们"]);
-       $product =  Db::table('ww_article')
-           ->alias('a')
-           ->field(['a.*'])
-           ->where('b.pid' ,'=',17)
-           ->order(['a.create_time' => 'desc'])
-           ->join('ww_article_cate b','a.article_cate_id = b.id','left')
-           ->limit(6)
-           ->select();
-       $project =  Db::table('ww_article')
-           ->alias('a')
-           ->field(['a.*'])
-           ->where('b.pid' ,'=',2)
-           ->order(['a.create_time' => 'desc'])
-           ->join('ww_article_cate b','a.article_cate_id = b.id','left')
-           ->limit(4)
-           ->select();
-
+       $hotArticelModel  = new Article();
+       $hotArticel = $hotArticelModel->where(['is_hot' =>1,'status' => 1])->order('sort','desc')->select();
        return  $this->port(
-           1,"success",['banner' => $banner,"service" => $service,'about' => $aboutus,'product'=>$product,'project' => $project,]
+           1,"success",['banner' => $banner,'article' => $hotArticel]
        );
    }
    //返回轮播图
