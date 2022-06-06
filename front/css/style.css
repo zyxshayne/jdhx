@@ -549,7 +549,7 @@ header .sticky {
 	transition: 0.4s ease-in-out;
 }
 header .navbar li a {
-	font-size: 12px;
+	font-size: 13px;
 	color: #fff;
 	font-weight: normal;
 	padding: 20px 0px;
@@ -3995,9 +3995,9 @@ footer p {
 	font-size: 14px;
 }
 footer .links a {
-	font-size: 14px;
+	font-size: 12px;
 	color: #fff;
-	line-height: 36px;
+	line-height: 30px;
 	display: inline-block;
 	width: 100%;
 	letter-spacing: 1px;
@@ -6001,4 +6001,7 @@ body.margin-50 .space-nav .is-sticky .sticky {
 }
 .tp-banner2{
 	touch-action: none;
+}
+.span-font12{
+	font-size: 12px;
 }
