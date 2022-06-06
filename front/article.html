@@ -75,7 +75,7 @@
             <div class="sticky">
                 <div class="container">
                     <!-- Logo -->
-                    <div class="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""></a>
+                    <div class="logo"></a>
                     </div>
 
                     <!-- Navigation -->
@@ -134,7 +134,7 @@
 <script>
     $(function () {
         var id = getUrlParams('id')
-        $('.footerpage').load("./footer.html")
+        // $('.footerpage').load("./footer.html")
         $.ajax({
             url:confg.site+"port/article/getArticleInfo?id="+id,
             type:'get',
