@@ -76,7 +76,7 @@ class ArticleController extends PortControllerBase
         }
         $article_info = Db::name('article')->field($this->field)->where([
                           'status' => 1
-                        ])->cache($this->param('id'),config('webconfig.port_cache_time'),'VAE_ARTICLE_INFO')->find($this->param('id'));
+                        ])->find($this->param('id'));
         if(empty($article_info)){
             return $this->port(0,'内容不存在或已下架');
         }
