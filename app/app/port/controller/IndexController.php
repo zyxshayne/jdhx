@@ -29,7 +29,12 @@ class IndexController extends PortControllerBase
        $model= new SlideInfo();
        $banner = $model->select();
        $hotArticelModel  = new Article();
-       $hotArticel = $hotArticelModel->where(['is_hot' =>1,'status' => 1])->order('sort','desc')->select();
+       $hotArticel = $hotArticelModel->alias('a')
+           ->field(['a.*','b.title cate'])
+           ->where(['is_hot' =>1,'status' => 1])
+           ->join('ww_article_cate b','a.article_cate_id = b.id')
+           ->order('sort','desc')
+           ->select();
        return  $this->port(
            1,"success",['banner' => $banner,'article' => $hotArticel]
        );
