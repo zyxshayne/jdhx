@@ -12,7 +12,7 @@
 
                 <!-- Links -->
                 <div class="col-md-2">
-                    <h6>Links</h6>
+                    <h6 class="footer-link-h6">Links</h6>
                     <ul class="links">
                         <li><a href="index.html">WIN-WIN</a></li>
                         <li><a href="index.html">DESIGN </a></li>
@@ -24,7 +24,7 @@
                 <div class="col-md-3">
                     <h6>WINWIN   &nbsp;&nbsp;&nbsp;  WECHAT</h6>
                     <div class="flicker-img">
-                        <ul id="qrcode">
+                        <ul id="qrcode" class="padding-top-10">
                         </ul>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                 <div class="col-md-3">
                     <div class="widget" >
                         <h6>Contract</h6>
-                        <div id="contract" style="color: #BDC3C7">
+                        <div id="contract" style="color: #BDC3C7" class="padding-top-5">
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
         //logo
         $('.logo').append('<a href="index.html"><img class="img-responsive"  src="'+data.site.logo+'" alt=""></a>')
         //地址
-        $('#address').append(' <div class="padding-right-50"><img  style="width: 150px;height: 29px" src="'+data.site.logo+'" class="margin-bottom-15 padding-right-30" alt="">\n' +
+        $('#address').append(' <div class="padding-right-40"><img  style="width: 150px;height: 29px" src="'+data.site.logo+'" class="margin-bottom-15 padding-right-30" alt="">\n' +
             '                       <p><span class="span-font12">'+data.company.address+'</span></p>\n' +
             '                    </div>')
         //二维码

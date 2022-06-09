@@ -4135,7 +4135,7 @@ footer .social_icons a {
 	color: #fff;
 	letter-spacing: 2px;
 	font-weight: 600;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 .news-letter p {
 	font-size: 13px;
@@ -5973,11 +5973,11 @@ body.margin-50:before {
 body.margin-50 .space-nav .is-sticky .sticky {
 	margin-top: 50px;
 }
-
 .portfolio  .box-img {
 	width: 100%;
-	position: absolute;/*设为绝对定位*/
-	z-index: -1;/*置于底层*/
+	height: 100%;
+	/*position: absolute;!*设为绝对定位*!*/
+	/*z-index: -1;!*置于底层*!*/
 }
 .portfolio .box-title {
 	width: inherit;

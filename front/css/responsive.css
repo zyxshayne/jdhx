@@ -1357,14 +1357,17 @@ header.header-1 .is-sticky .sticky .social_icons {
 	width: 100%;
 }
 /*	字体大小*/
-.portfolio .box-title {
-	top: 5%;
-	font-size: 30px;
+	.portfolio {
+		height: 250px;
+	}
+	.portfolio .box-title {
+	top: 30%;
+	font-size: 20px;
 }
 .portfolio .box-desc {
 
-	top: 10%;
-	font-size: 20px;
+	top: 50%;
+	font-size: 15px;
 
 }
 .top-info-con ul li.lst {

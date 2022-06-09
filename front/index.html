@@ -192,15 +192,14 @@
     }
     function ShowArticle(article) {
         for(i=0;i<article.length;i++){
-            var str = ' <section class="portfolio port-wrap">  <div class="tp-banner-container">  ' +
-                ' <div class="tp-banner2"><ul>' +
-                '<li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">' +
+            var str = ' <section class="portfolio port-wrap">  ' +
+
                 '<a href="article.html?id='+article[i].id+'">'+
                 '<img class="box-img" src="'+ article[i].thumb+'" alt="home_slider3" data-bgposition="center center">'+
                 '</a>' +
-                '<div class="box-title">'+article[i].title+'</div>'+
+                '<div class="box-title">'+article[i].cate+'</div>'+
                 '<div class="box-desc">'+article[i].title+'</div>'+
-                '</li></ul></div></div></section>'
+                '</section>'
             $('#content').append(str)
         }
     }
