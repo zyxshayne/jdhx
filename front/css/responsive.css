@@ -1289,7 +1289,7 @@ body.margin-50 .space-nav .is-sticky .sticky {
 	width: 100%;
 }
 	.col-3 .portfolio-item{
-		width: 48%;
+		width: 50%;
 		float: left;
 	}
 .feature-item li {
@@ -1357,13 +1357,14 @@ header.header-1 .is-sticky .sticky .social_icons {
 	width: 100%;
 }
 /*	字体大小*/
-	.portfolio {
-		height: 250px;
-	}
+/*	.portfolio {*/
+/*		height: 250px;*/
+/*	}*/
 	.portfolio .box-title {
 	top: 30%;
 	font-size: 20px;
-}
+
+	}
 .portfolio .box-desc {
 
 	top: 50%;
@@ -1394,9 +1395,13 @@ header .logo:before {
 .gallery .col-6 li {
 	width: 100%;
 }
+	.row {
+		overflow: hidden;
+	}
 	.col-3 .portfolio-item{
 		width: 100%;
-		float: left;
+		/*height: 100%;*/
+		/*float: left;*/
 	}
 }
 @media(max-width:320px) {
@@ -1406,7 +1411,8 @@ header .logo:before {
 }
 	.col-3 .portfolio-item{
 		width: 100%;
-		float: left;
+		height: 100%;
+		/*float: left;*/
 	}
 	.portfolio .box-title {
 		top: 5%;
@@ -1420,8 +1426,8 @@ header .logo:before {
 	}
 }
 @media(max-height: 700px) {
-	.col-3 .portfolio-item{
-		width: 48%;
-		float: left;
-	}
+	/*.col-3 .portfolio-item{*/
+	/*	width: 48%;*/
+	/*	float: left;*/
+	/*}*/
 }

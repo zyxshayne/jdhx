@@ -1473,6 +1473,7 @@ header .container {
 }
 .items.row {
 	margin: 0px;
+	overflow: hidden;
 }
 .bottom-text-white {
 	position: relative;
