@@ -26,6 +26,8 @@ class SiteController extends AdminCheckAuth
             'keywords'     => empty($conf['keywords']) ? '' : $conf['keywords'],
             'desc'         => empty($conf['desc']) ? '' : $conf['desc'],
             'logo'         => empty($conf['logo']) ? '' : $conf['logo'],
+            'logo_footer'  => empty($conf['logo_footer']) ? '' : $conf['logo_footer'],
+            'logo_spec'    => empty($conf['logo_spec']) ? '' : $conf['logo_spec'],
             'admin_title'  => empty($conf['admin_title']) ? '' : $conf['admin_title'],
             'icp'          => empty($conf['icp']) ? '' : $conf['icp'],
             'code'         => empty($conf['code']) ? '' : $conf['code'],
@@ -46,7 +48,7 @@ class SiteController extends AdminCheckAuth
             if ($result !== true) {
                 return vae_assign(0,$result);
             } else {
-                $conf = "<?php return ['admin_title'=>'{$param["admin_title"]}','title'=>'{$param["title"]}','keywords'=>'{$param["keywords"]}','email'=> '{$param["email"]}','email_code' => '{$param["email_code"]}','logo'=>'{$param["logo"]}','desc'=>'{$param["desc"]}','icp'=>'{$param["icp"]}','code'=>'{$param["code"]}','domain'=>'{$param["domain"]}','port_cache_time'=>'{$param["port_cache_time"]}'];";
+                $conf = "<?php return ['admin_title'=>'{$param["admin_title"]}','title'=>'{$param["title"]}','keywords'=>'{$param["keywords"]}','email'=> '{$param["email"]}','email_code' => '{$param["email_code"]}','logo'=>'{$param["logo"]}','logo_footer' =>  '{$param["logo_footer"]}','logo_spec'=> '{$param["logo_spec"]}','desc'=>'{$param["desc"]}','icp'=>'{$param["icp"]}','code'=>'{$param["code"]}','domain'=>'{$param["domain"]}','port_cache_time'=>'{$param["port_cache_time"]}'];";
                 file_put_contents(VAE_ROOT . "data/conf/extra/webconfig.php",$conf);
                 return vae_assign();
             }

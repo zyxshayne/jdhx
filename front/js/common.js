@@ -1,4 +1,4 @@
-$('.header-nav').load("./nav.html")
+// $('.header-nav').load("./nav.html")
 $('.footerpage').load("./footer.html")
 $(function () {
     $.ajax({

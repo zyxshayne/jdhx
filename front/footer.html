@@ -67,9 +67,16 @@
         $('#copyright').append(footerSite)
         // $('#qrcode').append('<img src="'+data.company.weixin+'">')
         //logo
-        $('.logo').append('<a href="index.html"><img class="img-responsive"  src="'+data.site.logo+'" alt=""></a>')
+        //获取page
+        var  page = $("#page").attr('data-page')
+        if (page =="project"){
+            $('.logo').append('<a href="index.html"><img class="img-responsive"  src="'+data.site.logo_spec+'" alt=""></a>')
+        }else{
+            $('.logo').append('<a href="index.html"><img class="img-responsive"  src="'+data.site.logo+'" alt=""></a>')
+        }
+
         //地址
-        $('#address').append(' <div class="padding-right-40"><img  style="width: 150px;height: 29px" src="'+data.site.logo+'" class="margin-bottom-15 padding-right-30" alt="">\n' +
+        $('#address').append(' <div class="padding-right-40"><img  style="width: 150px;height: 29px" src="'+data.site.logo_footer+'" class="margin-bottom-15 padding-right-30" alt="">\n' +
             '                       <p><span class="span-font12">'+data.company.address+'</span></p>\n' +
             '                    </div>')
         //二维码

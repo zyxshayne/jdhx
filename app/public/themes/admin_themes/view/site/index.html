@@ -39,17 +39,41 @@
     </div>
   </div>
   <div class="layui-form-item">
-    <label class="layui-form-label">LOGO</label>
+    <label class="layui-form-label">页头logo</label>
     <div class="layui-input-inline">
       <div class="layui-upload">
         <button type="button" class="layui-btn" id="test1">上传LOGO</button>
         <div class="layui-upload-list" id="demo1">
-          <img src="{$webConf.logo}" />
+          <img src="{$webConf.logo}" width="150px" height="43px" />
           <input type="hidden" name="logo" value="{$webConf.logo}">
         </div>
       </div>
     </div>
-  </div> 
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">页脚logo</label>
+    <div class="layui-input-inline">
+      <div class="layui-upload">
+        <button type="button" class="layui-btn" id="test2">上传页脚LOGO</button>
+        <div class="layui-upload-list" id="demo2">
+          <img src="{$webConf.logo_footer}" width="150px" height="43px" />
+          <input type="hidden" name="logo_footer" value="{$webConf.logo_footer}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">页脚logo</label>
+    <div class="layui-input-inline">
+      <div class="layui-upload">
+        <button type="button" class="layui-btn" id="test3">上传页脚LOGO</button>
+        <div class="layui-upload-list" id="demo3">
+          <img src="{$webConf.logo_spec}" width="150px" height="43px" />
+          <input type="hidden" name="logo_spec" value="{$webConf.logo_spec}">
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="layui-form-item layui-form-text">
     <label class="layui-form-label">ICP备案号</label>
     <div class="layui-input-block" style="max-width: 500px;">
@@ -117,6 +141,35 @@ layui.config({
       //上传成功
       $('#demo1 input').attr('value',res.data.key);
       $('#demo1 img').attr('src',res.data.key);
+    }
+  });
+  //logo上传
+  var uploadInst2 = upload.render({
+    elem: '#test2'
+    ,url: '/admin/api/upload'
+    ,done: function(res){
+      //如果上传失败
+      if(res.code == 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+      $('#demo2 input').attr('value',res.data.key);
+      $('#demo2 img').attr('src',res.data.key);
+    }
+  });
+
+  //logo上传
+  var uploadInst3 = upload.render({
+    elem: '#test3'
+    ,url: '/admin/api/upload'
+    ,done: function(res){
+      //如果上传失败
+      if(res.code == 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+      $('#demo3 input').attr('value',res.data.key);
+      $('#demo3 img').attr('src',res.data.key);
     }
   });
   
